@@ -32,7 +32,7 @@
 
 pipeline {
     agent any
-    
+
     tools {
         nodejs "nodejs-18"
     }
@@ -43,11 +43,11 @@ pipeline {
                 sh 'npm install' 
             }
         }
-    }
 
-    stage('Test') { 
-        steps {
-            sh './jenkins/scripts/test.sh' 
+        stage('Test') { 
+            steps {
+                sh './jenkins/scripts/test.sh' 
+            }
         }
     }
 }
